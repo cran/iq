@@ -1,12 +1,12 @@
-5c63f9c5775e50a39eae3fa06ca75047 *DESCRIPTION
+87ac9b5ba5005bb6e8baf00320dd853d *DESCRIPTION
 fd9b8b35b2b5fdfe962e7ebf4cd48eea *LICENSE
 156b39d5010186d1e5d22b19d9bc6ede *NAMESPACE
-000bf3ae9cf6059c8b7e0e0274d4cf1e *R/iq.R
+33e1d4be06e8b58a25faa332bf62daed *R/iq.R
 56454d9538822ab00132bca25401f277 *build/vignette.rds
 98769c26ddcc224de817ac5604467a2a *data/spikeins.rda
 9156b4669ff6da28e2e34a5716560955 *inst/doc/iq.R
 79750730892c55ddb5baac1d7b1fec0e *inst/doc/iq.Rmd
-9c667c58b5d019de48f6dc501826b922 *inst/doc/iq.html
+1c43c27db0b4cde1d43d223882e9fe79 *inst/doc/iq.html
 f5c598149cdeebc79ccc8e77a779f2a9 *man/create_protein_list.Rd
 905d0855ad7fda347576feef755c01d1 *man/create_protein_table.Rd
 2604ff1f76052eba569ba2631f563e62 *man/extract_annotation.Rd

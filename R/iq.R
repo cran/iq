@@ -22,8 +22,10 @@ preprocess <- function(quant_table,
     # make secondary ids
     message("Concatenating secondary ids...\n")
     second_id <- as.character(quant_table[, secondary_id[1]])
-    for (i in 2:length(secondary_id)) {
-        second_id <- paste(second_id, as.character(quant_table[, secondary_id[i]]), sep = "_")
+    if (length(secondary_id) > 1) {
+        for (i in 2:length(secondary_id)) {
+            second_id <- paste(second_id, as.character(quant_table[, secondary_id[i]]), sep = "_")
+        }
     }
 
     d <- data.frame(protein_list = as.character(quant_table[, primary_id]),
