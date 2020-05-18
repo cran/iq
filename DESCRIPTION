@@ -1,7 +1,7 @@
 Package: iq
 Type: Package
 Title: Protein Quantification in Mass Spectrometry-Based Proteomics
-Version: 1.4
+Version: 1.5
 Authors@R: c(person("Thang", "Pham", email = "t.pham@amsterdamumc.nl",
                      role = c("aut", "cre", "cph", "ctb"),
                       comment = c(ORCID = "0000-0003-0333-2492")),
@@ -23,10 +23,10 @@ Encoding: UTF-8
 LazyData: true
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
-NeedsCompilation: no
-Packaged: 2020-04-26 09:16:47 UTC; t.pham
+NeedsCompilation: yes
+Packaged: 2020-05-18 17:47:55 UTC; t.pham
 Author: Thang Pham [aut, cre, cph, ctb]
     (<https://orcid.org/0000-0003-0333-2492>),
   Alex Henneman [ctb] (<https://orcid.org/0000-0002-3746-4410>)
 Repository: CRAN
-Date/Publication: 2020-04-27 00:50:02 UTC
+Date/Publication: 2020-05-18 18:30:14 UTC
