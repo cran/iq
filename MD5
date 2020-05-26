@@ -1,4 +1,4 @@
-fb1edb757e42feaade5514b4c3ab3b7d *DESCRIPTION
+786baf932d5876b0f550b5c431cbb088 *DESCRIPTION
 c125d5f669bd77e6930f14bf70da197d *LICENSE
 519a7c18a22392110c3a2d740b2b86eb *NAMESPACE
 96a67f645271be631a81765794ae15f1 *R/iq-fast.R
@@ -8,10 +8,10 @@ ad37762f37a6e24a8f047f5348e68f85 *build/vignette.rds
 f169f48786cab9ff0ba30b648bdf197e *inst/CITATION
 120d669497d826598813f060e7a63fc6 *inst/doc/iq-fast.R
 3e487081ba573f6865da752b6af50aca *inst/doc/iq-fast.Rmd
-610b368c53b322638837d738fe4deaea *inst/doc/iq-fast.html
+2342dc660c02571a0980066c269adde1 *inst/doc/iq-fast.html
 c78ad995e709872fdc60175cfc036253 *inst/doc/iq.R
 2d64a8596714d1b63265760af7e5ec4d *inst/doc/iq.Rmd
-76ed55e5c22a80b3635c11f024d881fe *inst/doc/iq.html
+1ab60e9e0742c2a4f655493243e96217 *inst/doc/iq.html
 173f311b4f0899ce980f87edacdc6ed2 *man/create_protein_list.Rd
 cab80d208aef946bb5edcb94af644fa0 *man/create_protein_table.Rd
 52afb82bd7769d5a5cabf7838c915f24 *man/extract_annotation.Rd
@@ -327,6 +327,6 @@ cb4d530d0038b2636ddb11a4bcc62fe2 *src/Eigen/src/misc/lapacke.h
 b26cda2639952d445dba2d5d098b56d8 *src/Eigen/src/plugins/MatrixCwiseBinaryOps.h
 fb00449ed85e3a51163604fe4ff5d8b7 *src/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 86bda4d8472b442070937faa0851f741 *src/Makevars
-133a07728ea996c537e34379a869faff *src/iq.cpp
+c43de91f98a030112885c96c9fb9bce3 *src/iq.cpp
 3e487081ba573f6865da752b6af50aca *vignettes/iq-fast.Rmd
 2d64a8596714d1b63265760af7e5ec4d *vignettes/iq.Rmd
