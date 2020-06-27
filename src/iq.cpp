@@ -1401,6 +1401,9 @@ SEXP iq_MaxLFQ(SEXP list) {
 
     if (stop_sig) {
         Rprintf("Canceled.\n");
+
+        UNPROTECT(1);
+
         delete protein_index;
         delete group_annotation;
         delete[] col_names;
