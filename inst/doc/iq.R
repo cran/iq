@@ -226,7 +226,7 @@ iq::plot_protein(tmp,
 #  output <- iq::create_protein_table(protein_list)
 #  
 #  # median polish
-#  output <- iq::create_protein_table(protein_list, method = "medpolish")
+#  output <- iq::create_protein_table(protein_list, method = "median_polish")
 #  
 #  # top 3
 #  output <- iq::create_protein_table(protein_list, method = "topN", N = 3)
