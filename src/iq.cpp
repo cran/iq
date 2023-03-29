@@ -11,7 +11,7 @@ Pham TV, Henneman AA, Jimenez CR. iq: an R package to estimate relative
 protein abundances from ion quantification in DIA-MS-based proteomics,
 Bioinformatics 2020 Apr 15;36(8):2611-2613.
 
-Software version: 1.9.9
+Software version: 1.9.10
 
 #########################################################################
 */
@@ -1545,14 +1545,14 @@ SEXP iq_MaxLFQ(SEXP list) {
 
     int nr = 0;
     vector<int> map_back((*protein_index).size(), -1);
-    for (int i = 0; i < (*protein_index).size(); i++) {
+    for (size_t i = 0; i < (*protein_index).size(); i++) {
         if (!(*protein_index)[i].empty()) {
             map_back[i] = nr;
             row_names[nr++] = i + 1;
         }
     }
 
-    int thres_display = 0;
+    size_t thres_display = 0;
 
     #ifdef _OPENMP
 
@@ -1575,7 +1575,7 @@ SEXP iq_MaxLFQ(SEXP list) {
     #endif
 
     #pragma omp parallel for schedule(dynamic)
-    for (int i = 0; i < (*protein_index).size(); i++) {
+    for (size_t i = 0; i < (*protein_index).size(); i++) {
         if (stop_sig) {
             continue;
         }
@@ -1730,5 +1730,4 @@ static const R_CallMethodDef callMethods[]  = {
 void R_init_myLib(DllInfo *info) {
     R_registerRoutines(info, NULL, callMethods, NULL, NULL);
     R_useDynamicSymbols(info, FALSE);
-    R_forceSymbols(info, TRUE);
 }
