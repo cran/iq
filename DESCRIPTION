@@ -1,7 +1,7 @@
 Package: iq
 Type: Package
 Title: Protein Quantification in Mass Spectrometry-Based Proteomics
-Version: 1.9.10
+Version: 1.9.12
 Authors@R: c(person("Thang", "Pham", email = "t.pham@amsterdamumc.nl",
                     role = c("aut", "cre", "cph", "ctb"),
                     comment = c(ORCID = "0000-0003-0333-2492")),
@@ -28,9 +28,9 @@ VignetteBuilder: knitr
 URL: https://github.com/tvpham/iq
 BugReports: https://github.com/tvpham/iq/issues
 NeedsCompilation: yes
-Packaged: 2023-03-22 09:48:18 UTC; t.pham
+Packaged: 2023-12-06 16:55:09 UTC; t.pham
 Author: Thang Pham [aut, cre, cph, ctb]
     (<https://orcid.org/0000-0003-0333-2492>),
   Alex Henneman [ctb] (<https://orcid.org/0000-0002-3746-4410>)
 Repository: CRAN
-Date/Publication: 2023-03-29 11:40:09 UTC
+Date/Publication: 2023-12-06 21:20:02 UTC

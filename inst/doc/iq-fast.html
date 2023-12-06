@@ -12,7 +12,7 @@
 
 <meta name="author" content="Thang V Pham" />
 
-<meta name="date" content="2023-03-22" />
+<meta name="date" content="2023-12-06" />
 
 <title>Fast MaxLFQ</title>
 
@@ -326,7 +326,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Fast MaxLFQ</h1>
 <h4 class="author">Thang V Pham</h4>
-<h4 class="date">2023-03-22</h4>
+<h4 class="date">2023-12-06</h4>
 
 
 
@@ -435,20 +435,21 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb4-14" title="14"><span class="co">#&gt; 26%</span></a>
 <a class="sourceLine" id="cb4-15" title="15"><span class="co">#&gt; 32%</span></a>
 <a class="sourceLine" id="cb4-16" title="16"><span class="co">#&gt; 37%</span></a>
-<a class="sourceLine" id="cb4-17" title="17"><span class="co">#&gt; 44%</span></a>
-<a class="sourceLine" id="cb4-18" title="18"><span class="co">#&gt; 49%</span></a>
-<a class="sourceLine" id="cb4-19" title="19"><span class="co">#&gt; 56%</span></a>
-<a class="sourceLine" id="cb4-20" title="20"><span class="co">#&gt; 61%</span></a>
-<a class="sourceLine" id="cb4-21" title="21"><span class="co">#&gt; 66%</span></a>
-<a class="sourceLine" id="cb4-22" title="22"><span class="co">#&gt; 73%</span></a>
-<a class="sourceLine" id="cb4-23" title="23"><span class="co">#&gt; 78%</span></a>
-<a class="sourceLine" id="cb4-24" title="24"><span class="co">#&gt; 83%</span></a>
-<a class="sourceLine" id="cb4-25" title="25"><span class="co">#&gt; 90%</span></a>
-<a class="sourceLine" id="cb4-26" title="26"><span class="co">#&gt; 95%</span></a>
-<a class="sourceLine" id="cb4-27" title="27"><span class="co">#&gt; Completed.</span></a></code></pre></div>
+<a class="sourceLine" id="cb4-17" title="17"><span class="co">#&gt; 43%</span></a>
+<a class="sourceLine" id="cb4-18" title="18"><span class="co">#&gt; 48%</span></a>
+<a class="sourceLine" id="cb4-19" title="19"><span class="co">#&gt; 53%</span></a>
+<a class="sourceLine" id="cb4-20" title="20"><span class="co">#&gt; 58%</span></a>
+<a class="sourceLine" id="cb4-21" title="21"><span class="co">#&gt; 64%</span></a>
+<a class="sourceLine" id="cb4-22" title="22"><span class="co">#&gt; 69%</span></a>
+<a class="sourceLine" id="cb4-23" title="23"><span class="co">#&gt; 74%</span></a>
+<a class="sourceLine" id="cb4-24" title="24"><span class="co">#&gt; 79%</span></a>
+<a class="sourceLine" id="cb4-25" title="25"><span class="co">#&gt; 85%</span></a>
+<a class="sourceLine" id="cb4-26" title="26"><span class="co">#&gt; 90%</span></a>
+<a class="sourceLine" id="cb4-27" title="27"><span class="co">#&gt; 95%</span></a>
+<a class="sourceLine" id="cb4-28" title="28"><span class="co">#&gt; Completed.</span></a></code></pre></div>
 <p>The results of the R implementation <code>result</code> and C++ implementation <code>result_faster</code> should be equal up to the floating-point precision of the underlying numerical libraries.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">cat</span>(<span class="st">&quot;Max difference =&quot;</span>, <span class="kw">max</span>(<span class="kw">abs</span>(result_faster<span class="op">$</span>estimate <span class="op">-</span><span class="st"> </span>result<span class="op">$</span>estimate), <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="co">#&gt; Max difference = 1.065814e-13</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="co">#&gt; Max difference = 1.225686e-13</span></a>
 <a class="sourceLine" id="cb5-3" title="3"></a>
 <a class="sourceLine" id="cb5-4" title="4"><span class="kw">cat</span>(<span class="st">&quot;Identical NAs =&quot;</span>, <span class="kw">identical</span>(<span class="kw">is.na</span>(result_faster<span class="op">$</span>estimate), <span class="kw">is.na</span>(result<span class="op">$</span>estimate)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
 <a class="sourceLine" id="cb5-5" title="5"><span class="co">#&gt; Identical NAs = TRUE</span></a>
@@ -504,7 +505,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb6-44" title="44"><span class="co">#&gt; 95%</span></a>
 <a class="sourceLine" id="cb6-45" title="45"><span class="co">#&gt; Completed.</span></a>
 <a class="sourceLine" id="cb6-46" title="46"><span class="co">#&gt;    user  system elapsed </span></a>
-<a class="sourceLine" id="cb6-47" title="47"><span class="co">#&gt;  580.94   20.44  601.76</span></a>
+<a class="sourceLine" id="cb6-47" title="47"><span class="co">#&gt;  584.83   18.31  603.19</span></a>
 <a class="sourceLine" id="cb6-48" title="48"></a>
 <a class="sourceLine" id="cb6-49" title="49"><span class="kw">system.time</span>({</a>
 <a class="sourceLine" id="cb6-50" title="50">    result_faster &lt;-<span class="st"> </span>iq<span class="op">::</span><span class="kw">fast_MaxLFQ</span>(norm_data)</a>
@@ -512,26 +513,27 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb6-52" title="52"><span class="co">#&gt; nrow = 3369557, # proteins = 3554, # samples = 24</span></a>
 <a class="sourceLine" id="cb6-53" title="53"><span class="co">#&gt; Using 11 threads...</span></a>
 <a class="sourceLine" id="cb6-54" title="54"><span class="co">#&gt; 0%</span></a>
-<a class="sourceLine" id="cb6-55" title="55"><span class="co">#&gt; 5%</span></a>
-<a class="sourceLine" id="cb6-56" title="56"><span class="co">#&gt; 10%</span></a>
+<a class="sourceLine" id="cb6-55" title="55"><span class="co">#&gt; 6%</span></a>
+<a class="sourceLine" id="cb6-56" title="56"><span class="co">#&gt; 11%</span></a>
 <a class="sourceLine" id="cb6-57" title="57"><span class="co">#&gt; 16%</span></a>
-<a class="sourceLine" id="cb6-58" title="58"><span class="co">#&gt; 21%</span></a>
+<a class="sourceLine" id="cb6-58" title="58"><span class="co">#&gt; 22%</span></a>
 <a class="sourceLine" id="cb6-59" title="59"><span class="co">#&gt; 27%</span></a>
 <a class="sourceLine" id="cb6-60" title="60"><span class="co">#&gt; 32%</span></a>
 <a class="sourceLine" id="cb6-61" title="61"><span class="co">#&gt; 37%</span></a>
-<a class="sourceLine" id="cb6-62" title="62"><span class="co">#&gt; 42%</span></a>
-<a class="sourceLine" id="cb6-63" title="63"><span class="co">#&gt; 47%</span></a>
-<a class="sourceLine" id="cb6-64" title="64"><span class="co">#&gt; 54%</span></a>
-<a class="sourceLine" id="cb6-65" title="65"><span class="co">#&gt; 59%</span></a>
+<a class="sourceLine" id="cb6-62" title="62"><span class="co">#&gt; 43%</span></a>
+<a class="sourceLine" id="cb6-63" title="63"><span class="co">#&gt; 48%</span></a>
+<a class="sourceLine" id="cb6-64" title="64"><span class="co">#&gt; 53%</span></a>
+<a class="sourceLine" id="cb6-65" title="65"><span class="co">#&gt; 58%</span></a>
 <a class="sourceLine" id="cb6-66" title="66"><span class="co">#&gt; 64%</span></a>
-<a class="sourceLine" id="cb6-67" title="67"><span class="co">#&gt; 70%</span></a>
+<a class="sourceLine" id="cb6-67" title="67"><span class="co">#&gt; 69%</span></a>
 <a class="sourceLine" id="cb6-68" title="68"><span class="co">#&gt; 75%</span></a>
 <a class="sourceLine" id="cb6-69" title="69"><span class="co">#&gt; 80%</span></a>
 <a class="sourceLine" id="cb6-70" title="70"><span class="co">#&gt; 86%</span></a>
 <a class="sourceLine" id="cb6-71" title="71"><span class="co">#&gt; 92%</span></a>
-<a class="sourceLine" id="cb6-72" title="72"><span class="co">#&gt; Completed.</span></a>
-<a class="sourceLine" id="cb6-73" title="73"><span class="co">#&gt;    user  system elapsed </span></a>
-<a class="sourceLine" id="cb6-74" title="74"><span class="co">#&gt;    4.05    0.05    1.92</span></a></code></pre></div>
+<a class="sourceLine" id="cb6-72" title="72"><span class="co">#&gt; 98%</span></a>
+<a class="sourceLine" id="cb6-73" title="73"><span class="co">#&gt; Completed.</span></a>
+<a class="sourceLine" id="cb6-74" title="74"><span class="co">#&gt;    user  system elapsed </span></a>
+<a class="sourceLine" id="cb6-75" title="75"><span class="co">#&gt;    3.95    0.08    1.98</span></a></code></pre></div>
 </div>
 </div>
 <div id="an-efficient-data-structure-and-data-loading" class="section level2">
@@ -590,26 +592,24 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb7-51" title="51"><span class="co">#&gt; 0%</span></a>
 <a class="sourceLine" id="cb7-52" title="52"><span class="co">#&gt; 5%</span></a>
 <a class="sourceLine" id="cb7-53" title="53"><span class="co">#&gt; 10%</span></a>
-<a class="sourceLine" id="cb7-54" title="54"><span class="co">#&gt; 16%</span></a>
-<a class="sourceLine" id="cb7-55" title="55"><span class="co">#&gt; 21%</span></a>
-<a class="sourceLine" id="cb7-56" title="56"><span class="co">#&gt; 26%</span></a>
-<a class="sourceLine" id="cb7-57" title="57"><span class="co">#&gt; 31%</span></a>
-<a class="sourceLine" id="cb7-58" title="58"><span class="co">#&gt; 37%</span></a>
-<a class="sourceLine" id="cb7-59" title="59"><span class="co">#&gt; 42%</span></a>
-<a class="sourceLine" id="cb7-60" title="60"><span class="co">#&gt; 47%</span></a>
-<a class="sourceLine" id="cb7-61" title="61"><span class="co">#&gt; 53%</span></a>
-<a class="sourceLine" id="cb7-62" title="62"><span class="co">#&gt; 58%</span></a>
-<a class="sourceLine" id="cb7-63" title="63"><span class="co">#&gt; 63%</span></a>
-<a class="sourceLine" id="cb7-64" title="64"><span class="co">#&gt; 68%</span></a>
-<a class="sourceLine" id="cb7-65" title="65"><span class="co">#&gt; 74%</span></a>
-<a class="sourceLine" id="cb7-66" title="66"><span class="co">#&gt; 79%</span></a>
-<a class="sourceLine" id="cb7-67" title="67"><span class="co">#&gt; 84%</span></a>
-<a class="sourceLine" id="cb7-68" title="68"><span class="co">#&gt; 90%</span></a>
-<a class="sourceLine" id="cb7-69" title="69"><span class="co">#&gt; 95%</span></a>
-<a class="sourceLine" id="cb7-70" title="70"><span class="co">#&gt; Completed.</span></a></code></pre></div>
+<a class="sourceLine" id="cb7-54" title="54"><span class="co">#&gt; 15%</span></a>
+<a class="sourceLine" id="cb7-55" title="55"><span class="co">#&gt; 26%</span></a>
+<a class="sourceLine" id="cb7-56" title="56"><span class="co">#&gt; 35%</span></a>
+<a class="sourceLine" id="cb7-57" title="57"><span class="co">#&gt; 40%</span></a>
+<a class="sourceLine" id="cb7-58" title="58"><span class="co">#&gt; 46%</span></a>
+<a class="sourceLine" id="cb7-59" title="59"><span class="co">#&gt; 51%</span></a>
+<a class="sourceLine" id="cb7-60" title="60"><span class="co">#&gt; 57%</span></a>
+<a class="sourceLine" id="cb7-61" title="61"><span class="co">#&gt; 64%</span></a>
+<a class="sourceLine" id="cb7-62" title="62"><span class="co">#&gt; 69%</span></a>
+<a class="sourceLine" id="cb7-63" title="63"><span class="co">#&gt; 75%</span></a>
+<a class="sourceLine" id="cb7-64" title="64"><span class="co">#&gt; 80%</span></a>
+<a class="sourceLine" id="cb7-65" title="65"><span class="co">#&gt; 85%</span></a>
+<a class="sourceLine" id="cb7-66" title="66"><span class="co">#&gt; 91%</span></a>
+<a class="sourceLine" id="cb7-67" title="67"><span class="co">#&gt; 98%</span></a>
+<a class="sourceLine" id="cb7-68" title="68"><span class="co">#&gt; Completed.</span></a></code></pre></div>
 <p>The result of the optimized pipeline <code>result_fastest</code> should be the same as that of the standard pipeline <code>result</code>.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">cat</span>(<span class="st">&quot;Max difference =&quot;</span>, <span class="kw">max</span>(<span class="kw">abs</span>(result_fastest<span class="op">$</span>estimate <span class="op">-</span><span class="st"> </span>result<span class="op">$</span>estimate), <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="co">#&gt; Max difference = 9.769963e-14</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="co">#&gt; Max difference = 1.136868e-13</span></a>
 <a class="sourceLine" id="cb8-3" title="3"></a>
 <a class="sourceLine" id="cb8-4" title="4"><span class="kw">cat</span>(<span class="st">&quot;Identical NAs =&quot;</span>, <span class="kw">identical</span>(<span class="kw">is.na</span>(result_fastest<span class="op">$</span>estimate), <span class="kw">is.na</span>(result<span class="op">$</span>estimate)), <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</a>
 <a class="sourceLine" id="cb8-5" title="5"><span class="co">#&gt; Identical NAs = TRUE</span></a>
@@ -704,7 +704,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb10-74" title="74"><span class="co">#&gt; 95%</span></a>
 <a class="sourceLine" id="cb10-75" title="75"><span class="co">#&gt; Completed.</span></a>
 <a class="sourceLine" id="cb10-76" title="76"><span class="co">#&gt;    user  system elapsed </span></a>
-<a class="sourceLine" id="cb10-77" title="77"><span class="co">#&gt;  828.16   30.19  858.88</span></a>
+<a class="sourceLine" id="cb10-77" title="77"><span class="co">#&gt;  826.36   31.81  858.46</span></a>
 <a class="sourceLine" id="cb10-78" title="78"></a>
 <a class="sourceLine" id="cb10-79" title="79"><span class="kw">system.time</span>({</a>
 <a class="sourceLine" id="cb10-80" title="80">    iq_dat &lt;-<span class="st"> </span>iq<span class="op">::</span><span class="kw">fast_read</span>(<span class="st">&quot;DIA-report-long-format.txt&quot;</span>,</a>
@@ -755,25 +755,24 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb10-125" title="125"><span class="co">#&gt; 0%</span></a>
 <a class="sourceLine" id="cb10-126" title="126"><span class="co">#&gt; 5%</span></a>
 <a class="sourceLine" id="cb10-127" title="127"><span class="co">#&gt; 10%</span></a>
-<a class="sourceLine" id="cb10-128" title="128"><span class="co">#&gt; 16%</span></a>
+<a class="sourceLine" id="cb10-128" title="128"><span class="co">#&gt; 15%</span></a>
 <a class="sourceLine" id="cb10-129" title="129"><span class="co">#&gt; 21%</span></a>
 <a class="sourceLine" id="cb10-130" title="130"><span class="co">#&gt; 26%</span></a>
-<a class="sourceLine" id="cb10-131" title="131"><span class="co">#&gt; 31%</span></a>
-<a class="sourceLine" id="cb10-132" title="132"><span class="co">#&gt; 37%</span></a>
-<a class="sourceLine" id="cb10-133" title="133"><span class="co">#&gt; 42%</span></a>
-<a class="sourceLine" id="cb10-134" title="134"><span class="co">#&gt; 47%</span></a>
-<a class="sourceLine" id="cb10-135" title="135"><span class="co">#&gt; 52%</span></a>
-<a class="sourceLine" id="cb10-136" title="136"><span class="co">#&gt; 58%</span></a>
-<a class="sourceLine" id="cb10-137" title="137"><span class="co">#&gt; 63%</span></a>
-<a class="sourceLine" id="cb10-138" title="138"><span class="co">#&gt; 68%</span></a>
-<a class="sourceLine" id="cb10-139" title="139"><span class="co">#&gt; 74%</span></a>
-<a class="sourceLine" id="cb10-140" title="140"><span class="co">#&gt; 79%</span></a>
-<a class="sourceLine" id="cb10-141" title="141"><span class="co">#&gt; 84%</span></a>
-<a class="sourceLine" id="cb10-142" title="142"><span class="co">#&gt; 91%</span></a>
-<a class="sourceLine" id="cb10-143" title="143"><span class="co">#&gt; 96%</span></a>
-<a class="sourceLine" id="cb10-144" title="144"><span class="co">#&gt; Completed.</span></a>
-<a class="sourceLine" id="cb10-145" title="145"><span class="co">#&gt;    user  system elapsed </span></a>
-<a class="sourceLine" id="cb10-146" title="146"><span class="co">#&gt;   30.75    2.90   17.00</span></a></code></pre></div>
+<a class="sourceLine" id="cb10-131" title="131"><span class="co">#&gt; 32%</span></a>
+<a class="sourceLine" id="cb10-132" title="132"><span class="co">#&gt; 38%</span></a>
+<a class="sourceLine" id="cb10-133" title="133"><span class="co">#&gt; 43%</span></a>
+<a class="sourceLine" id="cb10-134" title="134"><span class="co">#&gt; 49%</span></a>
+<a class="sourceLine" id="cb10-135" title="135"><span class="co">#&gt; 54%</span></a>
+<a class="sourceLine" id="cb10-136" title="136"><span class="co">#&gt; 60%</span></a>
+<a class="sourceLine" id="cb10-137" title="137"><span class="co">#&gt; 67%</span></a>
+<a class="sourceLine" id="cb10-138" title="138"><span class="co">#&gt; 73%</span></a>
+<a class="sourceLine" id="cb10-139" title="139"><span class="co">#&gt; 79%</span></a>
+<a class="sourceLine" id="cb10-140" title="140"><span class="co">#&gt; 84%</span></a>
+<a class="sourceLine" id="cb10-141" title="141"><span class="co">#&gt; 89%</span></a>
+<a class="sourceLine" id="cb10-142" title="142"><span class="co">#&gt; 95%</span></a>
+<a class="sourceLine" id="cb10-143" title="143"><span class="co">#&gt; Completed.</span></a>
+<a class="sourceLine" id="cb10-144" title="144"><span class="co">#&gt;    user  system elapsed </span></a>
+<a class="sourceLine" id="cb10-145" title="145"><span class="co">#&gt;   30.78    2.48   17.55</span></a></code></pre></div>
 </div>
 </div>
 <div id="references" class="section level2">

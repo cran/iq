@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -8,7 +8,7 @@ knitr::opts_chunk$set(
 require("knitr")
 local_file_exist <- file.exists("DIA-report-long-format.txt")
 
-## ---- eval = local_file_exist, include = TRUE---------------------------------
+## ----eval = local_file_exist, include = TRUE----------------------------------
 library("iq") # if not already installed, run install.packages("iq") 
 
 raw <- read.delim("DIA-Report-long-format.txt")
