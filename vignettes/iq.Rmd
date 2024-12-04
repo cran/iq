@@ -1,7 +1,7 @@
 ---
 title: "Relative protein quantification for DIA-MS-based proteomics"
 author: "Thang V Pham"
-date: "2024-12-03" 
+date: "2024-12-04" 
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{iq: an R package to estimate relative protein abundances from ion quantification in DIA-MS-based proteomics}
@@ -95,7 +95,7 @@ hist(log2(raw[, "F.PeakArea"]), 100, main = "Histogram of log2 intensities",
      col = "steelblue", border = "steelblue", freq = FALSE)
 ```
 
-<img src="figure/iq1-1.png" width="95%" style="display: block; margin: auto;" />
+<img src="iq1-1.png" width="95%" style="display: block; margin: auto;" />
 
 Here the default threshold value of zero for `log2_intensity_cutoff` is appropriate as it removes the strange distribution of low-intensity data points on the left of the figure.
 
@@ -125,7 +125,7 @@ The function _iq::plot\_protein()_ plots the underlying data for individual prot
 iq::plot_protein(protein_list$P00366, main = "Protein P00366", split = NULL)  
 ```
 
-<img src="figure/iq2-1.png" width="95%" style="display: block; margin: auto;" />
+<img src="iq2-1.png" width="95%" style="display: block; margin: auto;" />
 
 By attaching the result of the quantitation algorithm to the data table, we can demonstrate both protein quantitative values and the underlying data. Here we set the colors of fragment ions to gray.
 
@@ -138,7 +138,7 @@ iq::plot_protein(rbind(protein_list$P00366,
                  split = NULL)  
 ```
 
-<img src="figure/iq3-1.png" width="95%" style="display: block; margin: auto;" />
+<img src="iq3-1.png" width="95%" style="display: block; margin: auto;" />
 
 The names of constituent ions are displayed on the right when `split` is not `NULL`. We can pass additional graphical parameters to fine-tune the plot. For example, in the following we make the font size smaller by setting `cex` to 0.4 due to the restricted plotting space.
 
@@ -147,7 +147,7 @@ The names of constituent ions are displayed on the right when `split` is not `NU
 iq::plot_protein(protein_list$P00366, main = "Protein P00366", cex = 0.4)  
 ```
 
-<img src="figure/iq4-1.png" width="95%" style="display: block; margin: auto;" />
+<img src="iq4-1.png" width="95%" style="display: block; margin: auto;" />
 
 We can also use the protein plotting function to display different quantitative methods for evaluation. For example, here we show the quantitative values of a spike-in protein using MaxFLQ and the spike-in ground truth values (rescaled so that the means of the two are the same).
 
@@ -166,7 +166,7 @@ iq::plot_protein(rbind(MaxLFQ = MaxLFQ_estimate,
                  col = c("green", "gold"))  
 ```
 
-<img src="figure/iq5-1.png" width="95%" style="display: block; margin: auto;" />
+<img src="iq5-1.png" width="95%" style="display: block; margin: auto;" />
 
 
 ### Extracting additional protein annotation
@@ -256,7 +256,7 @@ hist(log2(tab_small[, "quant"]), 100, main = "Histogram of log2 intensities",
      col = "steelblue", border = "steelblue", freq = FALSE)
 ```
 
-<img src="figure/iq6-1.png" width="95%" style="display: block; margin: auto;" />
+<img src="iq6-1.png" width="95%" style="display: block; margin: auto;" />
 
 Here we do not observe abnormal low-intensity values, and the default value intensity cutoff of zero is good.
 
@@ -374,7 +374,7 @@ iq::plot_protein(tmp,
                  col = c(rep("gray", nrow(p_list$A1L0T0)), "green", "blue"))  
 ```
 
-<img src="figure/iq7-1.png" width="95%" style="display: block; margin: auto;" />
+<img src="iq7-1.png" width="95%" style="display: block; margin: auto;" />
 
 Finally, we write out the result of MaxLFQ quantification to a text file. 
 

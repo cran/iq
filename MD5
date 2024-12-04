@@ -1,4 +1,4 @@
-e6ebb78abdb3b86fd6c775d9c5084ccc *DESCRIPTION
+0335cd9e5f5a45234bf555c9f055037d *DESCRIPTION
 080f07bfc22c745f02992f164af414e3 *LICENSE
 52727c1e0929eda636246454214aefeb *NAMESPACE
 2d8d1f9de5d9ae03cd0ced08959a002e *R/iq-fast.R
@@ -8,8 +8,8 @@ c271376915630246fce682145b28c745 *build/vignette.rds
 f169f48786cab9ff0ba30b648bdf197e *inst/CITATION
 56aecac986d50e3c977ecab9a3f27351 *inst/doc/iq-fast.Rmd
 e18d756d9d6ec9459ec798ea3e837209 *inst/doc/iq-fast.html
-b591bb0cdc255408643fdaf56c10079a *inst/doc/iq.Rmd
-15457cddb0e6eee2d43d2ad339fa4388 *inst/doc/iq.html
+706d388dd484e6892959944fb25b45c1 *inst/doc/iq.Rmd
+ddb4b6e4e2ef195d593c41bd1521f07b *inst/doc/iq.html
 173f311b4f0899ce980f87edacdc6ed2 *man/create_protein_list.Rd
 536f7b43f86603ffa28977997f6faa9f *man/create_protein_table.Rd
 52afb82bd7769d5a5cabf7838c915f24 *man/extract_annotation.Rd
@@ -28,4 +28,11 @@ dc4799a487759a79d53d84e611db9b29 *man/fast_read.Rd
 5b85f4329f084208ea2d73f1d4642661 *src/Makevars
 7443e537473b0a7e3c33579fc7f2d9dc *src/iq.cpp
 56aecac986d50e3c977ecab9a3f27351 *vignettes/iq-fast.Rmd
-b591bb0cdc255408643fdaf56c10079a *vignettes/iq.Rmd
+706d388dd484e6892959944fb25b45c1 *vignettes/iq.Rmd
+eecf401d11c13c0257d423b932a0257d *vignettes/iq1-1.png
+d96ea2ee76c4eb73c5f713af301e6809 *vignettes/iq2-1.png
+4936f603702a443fb12a370c11a9a1aa *vignettes/iq3-1.png
+b65b6061861293fcea867f10079632c1 *vignettes/iq4-1.png
+08374e2c492b822acc53d78911cd717e *vignettes/iq5-1.png
+5efb730aef46595643fc61e689ca73de *vignettes/iq6-1.png
+33db596af1dd6806453edeb58aa4d333 *vignettes/iq7-1.png
